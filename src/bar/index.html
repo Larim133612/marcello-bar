@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARCELLO | Bar – 那須塩原</title>
+  <meta name="description" content="知る人ぞ知る隠れ家バー MARCELLO。那須塩原駅から徒歩7分。西洋風の落ち着いた空間で、特別な夜を。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#b8974a',
+            'gold-light': '#d4b46a',
+            dark: '#0d0a07',
+            'dark-2': '#1a1410',
+            'dark-3': '#231c15',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Noto Serif JP', 'serif'],
+            light: ['Cormorant Garamond', 'Noto Serif JP', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0d0a07; color: #e8e0d4; }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #b8974a, transparent);
+      margin: 0 auto;
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(13,10,7,0.55) 0%, rgba(13,10,7,0.75) 60%, rgba(13,10,7,1) 100%);
+    }
+    .nav-link {
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: #b8974a; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body class="font-light">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-5" style="background: linear-gradient(to bottom, rgba(13,10,7,0.9), transparent);">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="font-serif text-xl tracking-widest text-gold-light">MARCELLO</a>
+      <ul class="hidden md:flex gap-8 text-xs tracking-widest text-stone-400">
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#menu" class="nav-link">MENU</a></li>
+        <li><a href="#access" class="nav-link">ACCESS</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- 写真プレースホルダー -->
+    <div class="absolute inset-0 bg-dark-3" style="background-image: url('images/hero.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative text-center px-4">
+      <p class="text-xs tracking-[0.4em] text-gold mb-6 uppercase">Bar — Nasushiobara</p>
+      <h1 class="font-serif text-6xl md:text-8xl text-white tracking-widest mb-6">MARCELLO</h1>
+      <div class="divider mb-6"></div>
+      <p class="text-sm md:text-base tracking-widest text-stone-300" style="font-family: 'Noto Serif JP', serif;">
+        知る人ぞ知る、大人の隠れ家
+      </p>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone-500">
+      <span class="text-xs tracking-widest">SCROLL</span>
+      <div class="w-px h-10 bg-gradient-to-b from-stone-500 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">About</p>
+      <h2 class="section-title text-3xl text-white mb-6">隠れ家の夜</h2>
+      <div class="divider mb-10"></div>
+      <p class="leading-loose text-stone-300 text-sm md:text-base" style="font-family: 'Noto Serif JP', serif;">
+        那須塩原の静かな夜に佇む、西洋風の大人のバー。<br />
+        知る人ぞ知る空間で、こだわりのドリンクと<br />
+        ゆったりとした時間をお楽しみください。<br /><br />
+        薄暗い照明と落ち着いたインテリアが、<br />
+        日常から切り離された特別なひとときを演出します。
+      </p>
+    </div>
+  </section>
+
+  <!-- Atmosphere image row (placeholder) -->
+  <section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto grid grid-cols-3 gap-3">
+      <div class="aspect-square bg-dark-3 rounded flex items-center justify-center text-stone-700 text-xs tracking-widest" style="background-image: url('images/photo1.jpg'); background-size: cover; background-position: center;">
+        <span class="photo-placeholder">PHOTO</span>
+      </div>
+      <div class="aspect-square bg-dark-3 rounded flex items-center justify-center text-stone-700 text-xs tracking-widest" style="background-image: url('images/photo2.jpg'); background-size: cover; background-position: center;">
+        <span class="photo-placeholder">PHOTO</span>
+      </div>
+      <div class="aspect-square bg-dark-3 rounded flex items-center justify-center text-stone-700 text-xs tracking-widest" style="background-image: url('images/photo3.jpg'); background-size: cover; background-position: center;">
+        <span class="photo-placeholder">PHOTO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="py-28 px-6 bg-dark-2">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Menu</p>
+      <h2 class="section-title text-3xl text-white mb-6">料金のご案内</h2>
+      <div class="divider mb-12"></div>
+      <div class="border border-stone-800 rounded p-8 md:p-12">
+        <p class="text-xs tracking-widest text-stone-500 uppercase mb-8">Price Guide</p>
+        <p class="font-serif text-4xl md:text-5xl text-gold-light mb-4">¥4,000 〜 ¥5,000</p>
+        <p class="text-sm text-stone-400 tracking-widest mb-10">お一人様あたりの目安</p>
+        <div class="w-full h-px bg-stone-800 mb-8"></div>
+        <p class="text-sm text-stone-400 leading-loose" style="font-family: 'Noto Serif JP', serif;">
+          ウイスキー・カクテル・ワインをはじめ、<br />
+          豊富なドリンクをご用意しております。<br />
+          詳しくはお気軽にお問い合わせください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section id="access" class="py-28 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Access</p>
+        <h2 class="section-title text-3xl text-white mb-6">アクセス</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Info -->
+        <div class="space-y-6 text-sm text-stone-300" style="font-family: 'Noto Serif JP', serif;">
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Address</p>
+            <p class="leading-loose">〒329-3157<br />栃木県那須塩原市大原間西1丁目13-9</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Station</p>
+            <p>那須塩原駅より徒歩7分</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Hours</p>
+            <p>PM 6:00 — AM 0:00</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Closed</p>
+            <p>年中無休</p>
+          </div>
+        </div>
+        <!-- Map embed placeholder -->
+        <div class="w-full aspect-video bg-dark-3 rounded overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194!2d140.0486!3d36.9285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDU1JzQyLjYiTiAxNDDCsDAyJzU0LjkiRQ!5e0!3m2!1sja!2sjp!4v1"
+            width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-28 px-6 bg-dark-2">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Contact</p>
+      <h2 class="section-title text-3xl text-white mb-6">お問い合わせ・ご予約</h2>
+      <div class="divider mb-12"></div>
+      <p class="text-sm text-stone-400 leading-loose mb-10" style="font-family: 'Noto Serif JP', serif;">
+        ご予約・お問い合わせはお電話にて<br />承っております。
+      </p>
+      <a href="tel:08066511966"
+         class="inline-block border border-gold text-gold-light tracking-[0.3em] text-sm px-10 py-4 hover:bg-gold hover:text-dark transition-all duration-300">
+        080-6651-1966
+      </a>
+      <p class="mt-6 text-xs text-stone-600 tracking-widest">PM 6:00 — AM 0:00</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6 border-t border-stone-900">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-gold-light tracking-widest">MARCELLO</p>
+      <p class="text-xs text-stone-600 tracking-widest">〒329-3157 栃木県那須塩原市大原間西1丁目13-9</p>
+      <p class="text-xs text-stone-700">© 2026 MARCELLO. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
