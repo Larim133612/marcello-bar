@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{店名}} | Bar – {{エリア名}}</title>
+  <meta name="description" content="{{メタディスクリプション}}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#b8974a',
+            'gold-light': '#d4b46a',
+            dark: '#0d0a07',
+            'dark-2': '#1a1410',
+            'dark-3': '#231c15',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Noto Serif JP', 'serif'],
+            light: ['Cormorant Garamond', 'Noto Serif JP', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0d0a07; color: #e8e0d4; }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #b8974a, transparent);
+      margin: 0 auto;
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(13,10,7,0.55) 0%, rgba(13,10,7,0.75) 60%, rgba(13,10,7,1) 100%);
+    }
+    .nav-link {
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: #b8974a; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body class="font-light">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-5" style="background: linear-gradient(to bottom, rgba(13,10,7,0.9), transparent);">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="font-serif text-xl tracking-widest text-gold-light">{{店名}}</a>
+      <ul class="hidden md:flex gap-8 text-xs tracking-widest text-stone-400">
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#menu" class="nav-link">MENU</a></li>
+        <li><a href="#access" class="nav-link">ACCESS</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <!-- 画像: images/hero.png を差し替え（推奨サイズ: 1920x1080px 以上） -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-dark-3" style="background-image: url('images/hero.png'); background-size: cover; background-position: center;"></div>
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative text-center px-4">
+      <p class="text-xs tracking-[0.4em] text-gold mb-6 uppercase">Bar — {{エリア名}}</p>
+      <h1 class="font-serif text-6xl md:text-8xl text-white tracking-widest mb-6">{{店名}}</h1>
+      <div class="divider mb-6"></div>
+      <p class="text-sm md:text-base tracking-widest text-stone-300" style="font-family: 'Noto Serif JP', serif;">
+        {{キャッチコピー}}
+      </p>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone-500">
+      <span class="text-xs tracking-widest">SCROLL</span>
+      <div class="w-px h-10 bg-gradient-to-b from-stone-500 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">About</p>
+      <h2 class="section-title text-3xl text-white mb-6">{{Aboutタイトル}}</h2>
+      <div class="divider mb-10"></div>
+      <p class="leading-loose text-stone-300 text-sm md:text-base" style="font-family: 'Noto Serif JP', serif;">
+        {{店舗説明文}}
+      </p>
+    </div>
+  </section>
+
+  <!-- Atmosphere image row -->
+  <!-- 画像: images/exterior.png / interior1.png / interior2.png を差し替え（推奨: 正方形 800x800px 以上） -->
+  <section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto grid grid-cols-3 gap-3">
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/exterior.png" alt="店舗外観" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/interior1.png" alt="店内カウンター" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/interior2.png" alt="店内ワイン棚" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <!-- 画像: images/menu1.png 〜 menu6.png を差し替え（推奨: 正方形 800x800px 以上） -->
+  <section id="menu" class="py-28 px-6 bg-dark-2">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Menu</p>
+        <h2 class="section-title text-3xl text-white mb-6">料金のご案内</h2>
+        <div class="divider mb-12"></div>
+        <div class="border border-stone-800 rounded p-8 md:p-10 max-w-2xl mx-auto mb-16">
+          <p class="text-xs tracking-widest text-stone-500 uppercase mb-8">Price Guide</p>
+          <p class="font-serif text-4xl md:text-5xl text-gold-light mb-4">{{価格帯}}</p>
+          <p class="text-sm text-stone-400 tracking-widest mb-10">お一人様あたりの目安</p>
+          <div class="w-full h-px bg-stone-800 mb-8"></div>
+          <p class="text-sm text-stone-400 leading-loose" style="font-family: 'Noto Serif JP', serif;">
+            {{メニュー説明文}}
+          </p>
+        </div>
+      </div>
+      <!-- Menu photos -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu1.png" alt="{{メニュー画像1_alt}}" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu2.png" alt="{{メニュー画像2_alt}}" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu3.png" alt="{{メニュー画像3_alt}}" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu4.png" alt="{{メニュー画像4_alt}}" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu5.png" alt="{{メニュー画像5_alt}}" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu6.png" alt="{{メニュー画像6_alt}}" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section id="access" class="py-28 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Access</p>
+        <h2 class="section-title text-3xl text-white mb-6">アクセス</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Info -->
+        <div class="space-y-6 text-sm text-stone-300" style="font-family: 'Noto Serif JP', serif;">
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Address</p>
+            <p class="leading-loose">{{郵便番号}}<br />{{住所}}</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Station</p>
+            <p>{{最寄り駅アクセス}}</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Hours</p>
+            <p>{{営業時間}}</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest text-gold uppercase mb-2">Closed</p>
+            <p>{{定休日}}</p>
+          </div>
+        </div>
+        <!-- Google Maps embed -->
+        <!-- {{Google Maps埋め込みURL}} を差し替え: Google Maps で共有 → 地図を埋め込む → src の URL をコピー -->
+        <div class="w-full aspect-video bg-dark-3 rounded overflow-hidden">
+          <iframe
+            src="{{Google Maps埋め込みURL}}"
+            width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-28 px-6 bg-dark-2">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Contact</p>
+      <h2 class="section-title text-3xl text-white mb-6">お問い合わせ・ご予約</h2>
+      <div class="divider mb-12"></div>
+      <p class="text-sm text-stone-400 leading-loose mb-10" style="font-family: 'Noto Serif JP', serif;">
+        ご予約・お問い合わせはお電話にて<br />承っております。
+      </p>
+      <!-- {{電話番号}} 例: 080-1234-5678 -->
+      <a href="tel:{{電話番号(ハイフンなし)}}"
+         class="inline-block border border-gold text-gold-light tracking-[0.3em] text-sm px-10 py-4 hover:bg-gold hover:text-dark transition-all duration-300">
+        {{電話番号}}
+      </a>
+      <p class="mt-6 text-xs text-stone-600 tracking-widest">{{営業時間}}</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6 border-t border-stone-900">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-gold-light tracking-widest">{{店名}}</p>
+      <p class="text-xs text-stone-600 tracking-widest">{{郵便番号}} {{住所}}</p>
+      <p class="text-xs text-stone-700">© {{西暦}} {{店名}}. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
