@@ -69,7 +69,7 @@
   <!-- Hero -->
   <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
     <!-- 写真プレースホルダー -->
-    <div class="absolute inset-0 bg-dark-3" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600&q=80&fit=crop'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 bg-dark-3" style="background-image: url('images/hero.png'); background-size: cover; background-position: center;"></div>
     <div class="hero-overlay absolute inset-0"></div>
     <div class="relative text-center px-4">
       <p class="text-xs tracking-[0.4em] text-gold mb-6 uppercase">Bar — Nasushiobara</p>
@@ -102,31 +102,60 @@
     </div>
   </section>
 
-  <!-- Atmosphere image row (placeholder) -->
+  <!-- Atmosphere image row -->
   <section class="px-6 pb-20">
     <div class="max-w-5xl mx-auto grid grid-cols-3 gap-3">
-      <div class="aspect-square bg-dark-3 rounded" style="background-image: url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&q=80&fit=crop'); background-size: cover; background-position: center;"></div>
-      <div class="aspect-square bg-dark-3 rounded" style="background-image: url('https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800&q=80&fit=crop'); background-size: cover; background-position: center;"></div>
-      <div class="aspect-square bg-dark-3 rounded" style="background-image: url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80&fit=crop'); background-size: cover; background-position: center;"></div>
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/exterior.png" alt="店舗外観" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/interior1.png" alt="店内カウンター" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square bg-dark-3 rounded overflow-hidden">
+        <img src="images/interior2.png" alt="店内ワイン棚" class="w-full h-full object-cover" />
+      </div>
     </div>
   </section>
 
   <!-- Menu -->
   <section id="menu" class="py-28 px-6 bg-dark-2">
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Menu</p>
-      <h2 class="section-title text-3xl text-white mb-6">料金のご案内</h2>
-      <div class="divider mb-12"></div>
-      <div class="border border-stone-800 rounded p-8 md:p-12">
-        <p class="text-xs tracking-widest text-stone-500 uppercase mb-8">Price Guide</p>
-        <p class="font-serif text-4xl md:text-5xl text-gold-light mb-4">¥4,000 〜 ¥5,000</p>
-        <p class="text-sm text-stone-400 tracking-widest mb-10">お一人様あたりの目安</p>
-        <div class="w-full h-px bg-stone-800 mb-8"></div>
-        <p class="text-sm text-stone-400 leading-loose" style="font-family: 'Noto Serif JP', serif;">
-          ウイスキー・カクテル・ワインをはじめ、<br />
-          豊富なドリンクをご用意しております。<br />
-          詳しくはお気軽にお問い合わせください。
-        </p>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-xs tracking-[0.4em] text-gold uppercase mb-4">Menu</p>
+        <h2 class="section-title text-3xl text-white mb-6">料金のご案内</h2>
+        <div class="divider mb-12"></div>
+        <div class="border border-stone-800 rounded p-8 md:p-10 max-w-2xl mx-auto mb-16">
+          <p class="text-xs tracking-widest text-stone-500 uppercase mb-8">Price Guide</p>
+          <p class="font-serif text-4xl md:text-5xl text-gold-light mb-4">¥4,000 〜 ¥5,000</p>
+          <p class="text-sm text-stone-400 tracking-widest mb-10">お一人様あたりの目安</p>
+          <div class="w-full h-px bg-stone-800 mb-8"></div>
+          <p class="text-sm text-stone-400 leading-loose" style="font-family: 'Noto Serif JP', serif;">
+            ウイスキー・カクテル・ワインをはじめ、<br />
+            豊富なドリンクをご用意しております。<br />
+            詳しくはお気軽にお問い合わせください。
+          </p>
+        </div>
+      </div>
+      <!-- Menu photos -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu1.png" alt="ワインリスト" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu2.png" alt="ワイン" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu3.png" alt="料理" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu4.png" alt="ステーキ" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu5.png" alt="シャルキュトリー" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-square rounded overflow-hidden">
+          <img src="images/menu6.png" alt="ワインボトル" class="w-full h-full object-cover" />
+        </div>
       </div>
     </div>
   </section>
